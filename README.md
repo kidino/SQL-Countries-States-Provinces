@@ -7,6 +7,11 @@ I thought I'd make an SQL version. You normally use this for creating dependent 
 
 A simple query to list all countries would be like:
 
-```select * from states_provinces left join countries on states_provinces.country_id = countries.country_id;```
+```
+select * 
+from states_provinces left join countries 
+on states_provinces.country_id = countries.country_id
+order by countries.name asc, states_provinces.name asc;
+```
 
 Have fun!
